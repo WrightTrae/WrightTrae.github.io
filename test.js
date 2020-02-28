@@ -1,3 +1,3 @@
    $(function(){
-      alert("My First Jquery Test");
+      alert("REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE");
    });
