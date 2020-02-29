@@ -1,0 +1,118 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$WrightPortfolio-primary: mat-palette($mat-indigo);
+$WrightPortfolio-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$WrightPortfolio-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$WrightPortfolio-theme: mat-light-theme($WrightPortfolio-primary, $WrightPortfolio-accent, $WrightPortfolio-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($WrightPortfolio-theme);
+
+@import "./fonts/fonts.scss";
+
+h1 {
+  color: white;
+  font-family: moon;
+}
+
+h2 {
+  color: white;
+  font-family: roboto-thin;
+}
+
+h3 {
+  font-family: roboto-regular;
+}
+
+body {
+	font-family: roboto-regular;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.toolbar {
+  height: 60px;
+  top: 0px;
+  width: 100%;
+  margin: -8px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  background-color: #007BBF;
+  color: white;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.content {
+  box-shadow: 0px 0px 10px #00000050;
+  position: relative;
+  background-color: #383838;
+  margin-left: -8px;
+  margin-right: -8px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 20px;
+  z-index: 1;
+}
+
+.content h1 {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  color: #007BBF;
+  font-size: 45px;
+  font-family: moon;
+  text-align: center;
+}
+
+.grid-container-child-text {
+  background-color: #F5F5F5;
+  text-align: left;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.grid-container-child-text h3 {
+  font-family: roboto-regular;
+  color: #007BBF;
+}
+
+.grid-container-child-text p {
+  font-family: roboto-light;
+  color: #000;
+}
+
+.grid-container-child-text body {
+  font-family: roboto-light;
+  color: #000;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
